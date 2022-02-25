@@ -1,0 +1,31 @@
+<html>
+    <head><title>Polar Bear Tracking</title></head>
+    <body>
+    <h1>Polar rows Tagged for Tracking</h1>
+
+        {% for row in rows_deploy %}
+        <p>Bear: 
+        <b>{{row["BearID"]}}</b> | 
+        {{row["PTT_ID"]}} | 
+        {{row["capture_lat"]}} | 
+        {{row['capture_long']}}	| 
+        {{row["Sex"]}} |
+        {{row["Age_class"]}} |
+        {{row['Ear_applied']}}	
+        </p>
+        {% endfor %}
+
+    <h1>Status Information</h1>
+
+        {% for row in rows_status %}
+        <p>Bear: 
+        <b>{{row["deployID"]}}</b> | 
+        {{row["recieved"]}} | 
+        {{row["latitude"]}} | 
+        {{row['longitude']}}	| 
+        {{row["temperature"]}} |
+        {{row["deployment_id"]}} |
+        </p>
+        {% endfor %}
+    </body>
+</html>
